@@ -1,0 +1,550 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--Tina Moon Project 1-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- my StyleSheet -->
+    <link rel="stylesheet" href="SurveyStyle.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <title>Student FeedBack Form</title>
+
+    <script type="text/javascript" lang="javascript">
+
+        function validate() {
+
+            fName = document.getElementById("txtStudentFName").value;
+            lName = document.getElementById("txtStudentLName").value;
+            studentID = document.getElementById("txtStudentID").value;
+            if (!fName == "" && !lName == "" && !studentID == "") {
+                document.getElementById("form1").submit();
+                return true;
+            }
+            else {
+                alert("You must enter your Student Information before submitting the form!");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body id="main">
+
+    <form id="form1" method="post" action="survey.aspx">
+
+            <div class="container">
+                <h3 class="text-center">
+                    Welcome to the Student Feedback Survey Page
+                </h3>
+                    <div class="card-header">
+                        <h4>Please Enter your Student Information:</h4>
+                        <label for="inputName" class="form-label">StudentName: </label>
+                        <input type="text" class="form-control" name="txtStudentFName" id="txtStudentFName" placeholder="Enter First Name">
+                        <input type="text" class="form-control" name="txtStudentLName" id="txtStudentLName" placeholder="Enter Last Name">
+                        <hr>
+                        <label for="inputID" class="form-label">Student ID: </label>
+                        <input type="text" class="form-control" name="txtStudentID" id="txtStudentID" placeholder="TUID i.e. tux#####">
+                    </div>
+                    <br>
+                    <div class="card-header">
+                        <h4>
+                            Please select your Course:
+                        </h4>
+                        <select class="btn btn-secondary dropdown-toggle" name="ddlStudentCourse" id="ddlStudentCourse" required>
+                            <option value="">Choose from..</option>
+                            <option value="CIS 1068:Program Design and Abstraction">CIS 1068:Program Design and Abstraction</option>
+                            <option value="CIS 2109:Database Management System">CIS 2109:Database Management System</option>
+                            <option value="CIS 3329:Network Architectures">CIS 3329:Network Architectures</option>
+                            <option value="CIS 2229:Operating System and Network">CIS 2229:Operating System and Network</option>
+                            <option value="CIS 3309:Component-Based Software Design ">CIS 3309:Component-Based Software Design</option>
+                            <option value="CIS 3344:Client-Side Scripting for Web">CIS 3344:Client-Side Scripting for Web</option>
+                        </select>
+                        <br>
+                    </div>
+                        <br>
+                    <div class="card-header">
+                        <h6 class="text-muted">Course related questions</h6>
+                        <br>
+                        <p>Question 1: This class has increased my interest in this field of study?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question1" name="question1">
+                            <label class="form-check-label" for="defaultCheck1" id="question1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question1" name="question1">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question1" name="question1">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question1" name="question1">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question1" name="question1">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+                        <p>Question 2: Were the assignments valuable to my learning experience?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question2" name="question2">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question2" name="question2">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question2" name="question2">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question2" name="question2">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question2" name="question2">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+                        <p>Question 3: The course effectively improved my study of interest?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question3" name="question3">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question3" name="question3">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question3" name="question3">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question3" name="question3">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question3" name="question3">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+                        <p>Question 4: The lectures, reading and assignments complemented each other?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question4" name="question4">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question4" name="question4">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question4" name="question4">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question4" name="question4">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question4" name="question4">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+                        <p>Question 5: The course workload were appropiate for the course level?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question5" name="question5">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question5" name="question5">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question5" name="question5">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question5" name="question5">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question5" name="question5">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+                        <p>Question 6: The course was organized in a manner that helped me understand underlying concepts?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question6" name="question6">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question6" name="question6">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question6" name="question6">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question6" name="question6">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question6" name="question6">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+                        <p>Question 7: The assignments helped me understand the course material?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question7" name="question7">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question7" name="question7">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question7" name="question7">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question7" name="question7">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question7" name="question7">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+                        <p>Question 8: The assignments properly prepared me for the exams?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question8" name="question8">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question8" name="question8">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question8" name="question8">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question8" name="question8">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question8" name="question8">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+                        <p>Question 9: The course followed the syllabus and course guidelines?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question9" name="question9">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question9" name="question9">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question9" name="question9">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question9" name="question9">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question9" name="question9">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+                        <p>Question 10: The course environment felt comfortable to express my ideas?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question10" name="question10">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question10" name="question10">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question10" name="question10">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question10" name="question10">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question10" name="question10">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+                        <p>Question 11: The instructional materials from the lab increased my knowledge and skills in the subject matter?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question11" name="question11">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question11" name="question11">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question11" name="question11">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question11" name="question11">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question11" name="question11">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+                        <p>Question 12: The textbooks were valuable to use as a guide to complete my assignments?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question12" name="question12">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question12" name="question12">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question12" name="question12">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question12" name="question12">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question12" name="question12">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+                        <hr>
+                        <h6 class="text-muted">Instructor related questions</h6>
+                        <br>
+                        <p>Question 13: The instructor was well prepared for the class?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question13" name="question13">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question13" name="question13">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question13" name="question13">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question13" name="question13">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question13" name="question13">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+                        <p>Question 14: The instructor showed interest in helping students learn?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question14" name="question14">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question14" name="question14">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question14" name="question14">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question14" name="question14">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question14" name="question14">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+                        <p>Question 15: The instructor responded to messages or emails in a timely manner?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question15" name="question15">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question15" name="question15">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question15" name="question15">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question15" name="question15">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question15" name="question15">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+                        <p>Question 16: I receieve useful feedback on my labs and exams?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question16" name="question16">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question16" name="question16">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question16" name="question16">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question16" name="question16">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question16" name="question16">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+                        <p>Question 17: The instructor was well prepared and organized for class?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question17" name="question17">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question17" name="question17">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question17" name="question17">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question17" name="question17">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question17" name="question17">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+                        <p>Question 18: The instructor had flexible office hours?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question18" name="question18">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question18" name="question18">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question18" name="question18">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question18" name="question18">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question18" name="question18">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+                        <p>Question 19: The instructor effectively explained the course concepts?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question19" name="question19">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question19" name="question19">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question19" name="question19">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question19" name="question19">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question19" name="question19">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <hr>
+
+
+                        <p>Question 20: I felt comfortable asking the instructor questions in and outside of the class?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="5" id="question20" name="question20">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="4" id="question20" name="question20">
+                            <label class="form-check-label" for="defaultCheck1">Agree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="3" id="question20" name="question20">
+                            <label class="form-check-label" for="defaultCheck1">Neutral </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="2" id="question20" name="question20">
+                            <label class="form-check-label" for="defaultCheck1">Disagree </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="1" id="question20" name="question20">
+                            <label class="form-check-label" for="defaultCheck1">Strongly Disagree </label>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+
+                    <br>
+                    <div class="col-12">
+                        <input type="submit" name="btnSubmit" id="btnSubmit" value="Submit Form" runat="server" class="btn btn-primary" onclick="return validate();" />
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <br>
+    </form>
+</body>
+</html>

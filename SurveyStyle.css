@@ -1,0 +1,50 @@
+﻿/*/Tina Moon Project 1*/
+/*# is for ID*/
+/*. is for class*/
+
+.card-body {
+    font-family: 'Bookman Old Style';
+}
+
+#ddlStudentCourse {
+    background-color: #FFF5EE;
+    color: black;
+    width: 300px
+}
+
+#txtStudentFName {
+    background: #FFF5EE;
+    font-family: 'Bookman Old Style';
+    width: 200px
+}
+
+#txtStudentLName {
+    background-color: #FFF5EE;
+    font-family: 'Bookman Old Style';
+    width: 200px;
+}
+
+#txtStudentID {
+    background-color: #FFF5EE;
+    font-family: 'Bookman Old Style';
+    width: 200px;
+}
+
+#btnSubmit {
+    background-color: #27822A;
+    border-radius: 12px;
+    position: absolute;
+    left: 45%;
+}
+
+    #btnSubmit:hover {
+        opacity: 0.5;
+    }
+
+.container {
+    font-family: 'Bookman Old Style';
+}
+
+.card-header {
+    border-radius: 12px;
+}
